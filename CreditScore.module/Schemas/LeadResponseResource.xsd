@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tns.tibco.com/bw/json/1536292470740" elementFormDefault="qualified" targetNamespace="http://tns.tibco.com/bw/json/1536292470740">
+  <complexType name="LeadResponseElementType">
+    <sequence>
+      <element maxOccurs="1" minOccurs="0" name="response">
+        <complexType>
+          <sequence>
+            <element maxOccurs="1" minOccurs="0" name="id" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="message" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="LeadResponseElement" type="tns:LeadResponseElementType"/>
+</schema>

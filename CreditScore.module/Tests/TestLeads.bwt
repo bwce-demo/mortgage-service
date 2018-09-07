@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emulation:EmulationData xmlns:emulation="http:///emulation.ecore" isBW="true" location="/CreditScore.module/Tests/TestLeads.bwt">
+  <ProcessNode Id="creditscore.module.CreateLeads" Name="creditscore.module.CreateLeads" ModelType="BW" moduleName="CreditScore.module">
+    <Assertion Id="f208acde-3304-474e-b989-1bb892944da6" Name="post" hasDecoration="true">
+      <Lang>urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0</Lang>
+      <Expression>
+&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://tns.tibco.com/bw/json/1536292470740&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;post.item&quot;/>&lt;xsl:template match=&quot;/&quot;>&lt;xsl:choose>&lt;xsl:when test=&quot;$post.item/tns3:LeadResponseElement/tns3:response/tns3:id='12345'&quot;>&lt;result status=&quot;passed&quot; message=&quot;Assertion passed.&quot;/>&lt;/xsl:when>&lt;xsl:otherwise>&lt;result status=&quot;failed&quot; message=&quot;Assertion failed.&quot;/>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/xsl:template>&lt;/xsl:stylesheet></Expression>
+      <OriginalExpression>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>
+&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://tns.tibco.com/bw/json/1536292470740&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;post&quot;/>&lt;xsl:template name=&quot;&quot; match=&quot;/&quot;>&lt;Primitive-Assertion>&lt;AssertType>&lt;string>&lt;testInput>&lt;xsl:value-of select=&quot;$post/item/tns3:LeadResponseElement/tns3:response/tns3:id&quot;/>&lt;/testInput>&lt;goldInput>&lt;xsl:value-of select=&quot;&amp;quot;12345&amp;quot;&quot;/>&lt;/goldInput>&lt;/string>&lt;/AssertType>&lt;/Primitive-Assertion>&lt;/xsl:template>&lt;/xsl:stylesheet></OriginalExpression>
+    </Assertion>
+    <Operation Name="callProcess" serviceName="creditscore.module.CreateLeads">
+      <Inputs Id="f875cffa-cdb6-43db-bff3-2bd3078c4ce3CreditScore.module_creditscore.module.CreateLeads_callProcess_Start" Name="Start" isDefault="true" type="CALLPROCESS">
+        <informations Name="input" nameSpace="http://tns.tibco.com/bw/json/1536292446011">
+          <nameSpaces prefix="tns" nameSapce="http://tns.tibco.com/bw/json/1536292446011"/>
+          <Parameter Name="tns:LeadRequestElement">
+            <parameters Name="tns:customer">
+              <parameters Name="tns:creditscore" Value="900" type="integer" nameSpace="http://tns.tibco.com/bw/json/1536292446011" canDelete="true">
+                <parent Name="LeadRequestElementType" nameSpace="http://tns.tibco.com/bw/json/1536292446011"/>
+              </parameters>
+              <parameters Name="tns:email" Value="&quot;rishi@demo.com&quot;" type="string" nameSpace="http://tns.tibco.com/bw/json/1536292446011" canDelete="true">
+                <parent Name="LeadRequestElementType" nameSpace="http://tns.tibco.com/bw/json/1536292446011"/>
+              </parameters>
+              <parameters Name="tns:name" Value="&quot;Rishi&quot;" type="string" nameSpace="http://tns.tibco.com/bw/json/1536292446011" canDelete="true">
+                <parent Name="LeadRequestElementType" nameSpace="http://tns.tibco.com/bw/json/1536292446011"/>
+              </parameters>
+              <parent Name="LeadRequestElementType" nameSpace="http://tns.tibco.com/bw/json/1536292446011"/>
+            </parameters>
+          </Parameter>
+        </informations>
+      </Inputs>
+      <resolvedInput inputValue="&lt;tns:LeadRequestElement xmlns:tns='http://tns.tibco.com/bw/json/1536292446011' >&lt;tns:customer>&lt;tns:creditscore>900&lt;/tns:creditscore>&lt;tns:email>&quot;rishi@demo.com&quot;&lt;/tns:email>&lt;tns:name>&quot;Rishi&quot;&lt;/tns:name>&lt;/tns:customer>&lt;/tns:LeadRequestElement>"/>
+    </Operation>
+  </ProcessNode>
+</emulation:EmulationData>

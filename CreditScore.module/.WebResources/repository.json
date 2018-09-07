@@ -1,0 +1,16 @@
+{
+    "records": [{
+        "name": "Cloud",
+        "items": [{
+            "localTimestamp": 1536072591257,
+            "localURI": "/CreditScore.module/Service Descriptors/CreditDetails_1.0.0.json",
+            "disabled": false,
+            "remoteTimestamp": 1535977642000,
+            "localHash": "787642ab5c83a1e1aaed6f6a4cd41f9e90de90b0",
+            "remoteId": "70",
+            "remoteHash": "787642ab5c83a1e1aaed6f6a4cd41f9e90de90b0"
+        }],
+        "url": "https://integration.cloud.tibco.com:443"
+    }],
+    "resources": []
+}
